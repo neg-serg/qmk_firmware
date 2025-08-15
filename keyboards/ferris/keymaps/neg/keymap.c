@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
-#if __has_include("keymap.h")
-#    include "keymap.h"
-#endif
+// #if __has_include("keymap.h")
+//     #include "keymap.h"
+// #endif
 
 
 /* THIS FILE WAS GENERATED!
@@ -11,20 +11,180 @@
  */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT_split_3x5_2(LT(1,KC_Q), KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, LCTL_T(KC_A), KC_S, LALT_T(KC_D), KC_F, LT(3,KC_G), KC_H, LT(4,KC_J), LALT_T(KC_K), LT(8,KC_L), RCTL_T(KC_SCLN), LSFT_T(KC_Z), KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, RSFT_T(KC_SLSH), KC_LGUI, KC_SPC, KC_ENT, LT(8,KC_TAB)),
-    [1] = LAYOUT_split_3x5_2(KC_NO, KC_ESC, KC_DLR, KC_DLR, KC_TAB, KC_NO, KC_TILD, KC_NO, KC_QUOT, KC_LBRC, KC_TRNS, KC_TILD, KC_GRV, LCTL(KC_LEFT), LCTL(KC_RGHT), KC_BSPC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_TRNS, KC_LBRC, KC_NO, KC_RBRC, KC_ENT, LCTL(KC_BSPC), KC_GRV, KC_EQL, KC_MINS, KC_RBRC, KC_TAB, KC_TILD, QK_REP, QK_REP),
-    [2] = LAYOUT_split_3x5_2(KC_TRNS, KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, KC_NO, KC_NO, KC_LGUI, KC_NO, LCTL(KC_LALT), LCA(KC_LSFT), KC_TRNS, KC_HOME, KC_PGDN, KC_END, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-    [3] = LAYOUT_split_3x5_2(KC_TRNS, KC_TRNS, KC_TRNS, KC_EQL, KC_MINS, KC_MINS, KC_EQL, KC_PIPE, KC_QUOT, KC_LBRC, KC_TRNS, KC_ASTR, KC_AMPR, KC_NO, KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_UP, KC_DLR, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_UNDS, KC_MINS, KC_BSLS, KC_GRV, KC_RBRC, RM_PREV, KC_TRNS, KC_TRNS, RM_NEXT),
-    [4] = LAYOUT_split_3x5_2(KC_TRNS, KC_COLN, KC_LT, KC_GT, KC_SCLN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_AT, KC_TRNS, KC_NO, KC_EQL, KC_PLUS, KC_PERC, KC_TRNS, KC_EXLM, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_VOLD, KC_TRNS, KC_TRNS, KC_VOLU),
-    [5] = LAYOUT_split_3x5_2(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10, KC_TRNS, KC_NO, LCTL(KC_LALT), KC_TRNS, KC_TRNS, KC_TRNS, KC_F4, KC_F5, KC_F6, KC_F11, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F12, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-    [6] = LAYOUT_split_3x5_2(KC_PSLS, KC_7, KC_8, KC_9, KC_PPLS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_0, KC_1, KC_2, KC_3, KC_PMNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS, KC_PAST, KC_4, KC_5, KC_6, KC_PEQL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
-    [7] = LAYOUT_split_3x5_2(KC_TRNS, KC_TRNS, KC_COLN, KC_ESC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL, KC_TRNS, KC_PERC, KC_SLSH, KC_ENT, KC_TRNS, DF(1), KC_LGUI, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS, DF(0), KC_TRNS, RALT_T(KC_COMM), RCTL_T(KC_DOT), QK_BOOT, KC_TRNS, KC_TAB, KC_NO, KC_TRNS),
-    [8] = LAYOUT_split_3x5_2(KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_TILD, LCTL(KC_UNDS), LCTL(KC_PLUS), KC_LBRC, KC_RBRC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_ENT, KC_NO, KC_NO, KC_PIPE, KC_NO)
+    //
+    //              Слой 0: Базовый (QWERTY)
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │ Q  │ W  │ E  │ R  │ T   │               │ Y  │ U  │ I  │ O  │ P   │
+    //  │────┼────┼────┼────┼─────┤               │────┼────┼────┼────┼─────│
+    //  │ A  │ S  │ D  │ F  │ G   │               │ H  │ J  │ K  │ L  │ SCLN│
+    //  │────┼────┼────┼────┼─────┤               │────┼────┼────┼────┼─────│
+    //  │ Z  │ X  │ C  │ V  │ B   │               │ N  │ M  │ ,  │ .  │  /  │
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │ LWin │ SPC│         │ Enter│ Tab│
+    //            └───────────┘         └───────────┘
+    [0] = LAYOUT_split_3x5_2(
+        // Left
+        LT(1,KC_Q),    KC_W,  KC_E,          KC_R,  KC_T,
+        LCTL_T(KC_A),  KC_S,  LALT_T(KC_D),  KC_F,  LT(3,KC_G),
+        LSFT_T(KC_Z),  KC_X,  KC_C,          KC_V,  KC_B,
+
+        KC_LGUI, KC_SPC,
+        // Right
+        KC_Y,  KC_U,        KC_I,          KC_O,        KC_P,
+        KC_H,  LT(4,KC_J),  LALT_T(KC_K),  LT(8,KC_L),  RCTL_T(KC_SCLN),
+        KC_N,  KC_M,        KC_COMM,       KC_DOT,      RSFT_T(KC_SLSH),
+
+        KC_ENT, LT(8,KC_TAB)
+    ),
+
+    //
+    //              Слой 1: Навигация и специальные символы
+    //  ┌───────────────────────────┐               ┌─────────────────────────┐
+    //  │NO  │ESC │$   │$    │TAB   │               │NO  │~   │NO  │'   │[    │
+    //  │────┼────┼────┼─────┼──────┤               │────┼────┼────┼────┼─────│
+    //  │TRNS│~   │`   │LCTRL│LCTRL││               │BSPC│◄   │▼   │▲   │►    │
+    //  │────┼────┼────┼─────┼──────┤               │────┼────┼────┼────┼─────│
+    //  │TRNS│[   │NO  │]    │ENT   │               │LCTL│`   │=   │-   │]    │
+    //  └───────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │ Tab  │ ~  │         │ RPT │ RPT │
+    //            └───────────┘         └───────────┘
+    [1] = LAYOUT_split_3x5_2(
+        KC_NO, KC_ESC, KC_DLR, KC_DLR, KC_TAB, KC_NO, KC_TILD, KC_NO, KC_QUOT, KC_LBRC,
+        KC_TRNS, KC_TILD, KC_GRV, LCTL(KC_LEFT), LCTL(KC_RGHT), KC_BSPC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT,
+        KC_TRNS, KC_LBRC, KC_NO, KC_RBRC, KC_ENT, LCTL(KC_BSPC), KC_GRV, KC_EQL, KC_MINS, KC_RBRC,
+        KC_TAB, KC_TILD, QK_REP, QK_REP
+    ),
+
+    //              Слой 2: Управление окнами (Window Control)
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │TRNS│TRNS│PGUP│TRNS│TRNS│               │TRNS│TRNS│TRNS│TRNS│TRNS│
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │◄   │▲   │▼   │►   │NO  │               │NO  │LGUI│NO  │LCA │LCA │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│HOME│PGDN│END │TRNS│               │TRNS│TRNS│TRNS│TRNS│TRNS│
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │TRNS │TRNS│         │TRNS │TRNS│
+    //            └───────────┘         └───────────┘
+    [2] = LAYOUT_split_3x5_2(
+        KC_TRNS, KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_LEFT, KC_UP, KC_DOWN, KC_RGHT, KC_NO, KC_NO, KC_LGUI, KC_NO, LCTL(KC_LALT), LCA(KC_LSFT),
+        KC_TRNS, KC_HOME, KC_PGDN, KC_END, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+    ),
+
+    //              Слой 3: Символы (Symbols)
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │TRNS│TRNS│TRNS│=   │-   │               │-   │=   │|   │'   │[   │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│* │&   │NO  │TRNS│               │◄   │▼   │►   │▲   │$   │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│TRNS│TRNS│TRNS│TRNS│               │_   │-   │\   │`   │]   │
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │ RM_P│TRNS│         │TRNS │RM_N│
+    //            └───────────┘         └───────────┘
+    [3] = LAYOUT_split_3x5_2(
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_EQL, KC_MINS, KC_MINS, KC_EQL, KC_PIPE, KC_QUOT, KC_LBRC,
+        KC_TRNS, KC_ASTR, KC_AMPR, KC_NO, KC_TRNS, KC_LEFT, KC_DOWN, KC_RGHT, KC_UP, KC_DLR,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_UNDS, KC_MINS, KC_BSLS, KC_GRV, KC_RBRC,
+        RM_PREV, KC_TRNS, KC_TRNS, RM_NEXT
+    ),
+
+    //              Слой 4: Специальные символы
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │TRNS│:   │<   │>   │;   │               │TRNS│TRNS│TRNS│TRNS│TRNS│
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │{   │}   │(   │)   │@   │               │TRNS│NO  │=   │+   │%   │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│!   │[   │]   │TRNS│               │TRNS│TRNS│TRNS│TRNS│TRNS│
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │VOLD │TRNS│         │TRNS │VOLU│
+    //            └───────────┘         └───────────┘
+    [4] = LAYOUT_split_3x5_2(
+        KC_TRNS, KC_COLN, KC_LT, KC_GT, KC_SCLN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_LCBR, KC_RCBR, KC_LPRN, KC_RPRN, KC_AT, KC_TRNS, KC_NO, KC_EQL, KC_PLUS, KC_PERC,
+        KC_TRNS, KC_EXLM, KC_LBRC, KC_RBRC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_VOLD, KC_TRNS, KC_TRNS, KC_VOLU
+    ),
+
+    //              Слой 5: Функциональные клавиши (F-Keys)
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │TRNS│TRNS│TRNS│TRNS│TRNS│               │TRNS│F7  │F8  │F9  │F10 │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│NO  │LCA │TRNS│TRNS│               │TRNS│F4  │F5  │F6  │F11 │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│TRNS│TRNS│TRNS│TRNS│               │TRNS│F1  │F2  │F3  │F12 │
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │TRNS │TRNS│         │TRNS │TRNS│
+    //            └───────────┘         └───────────┘
+    [5] = LAYOUT_split_3x5_2(
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F7, KC_F8, KC_F9, KC_F10,
+        KC_TRNS, KC_NO, LCTL(KC_LALT), KC_TRNS, KC_TRNS, KC_TRNS, KC_F4, KC_F5, KC_F6, KC_F11,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F12,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+    ),
+
+    //              Слой 6: Цифровой блок (Numpad)
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │/   │7   │8   │9   │+   │               │TRNS│TRNS│TRNS│TRNS│TRNS│
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │0   │1   │2   │3   │-   │               │TRNS│TRNS│TRNS│NO  │TRNS│
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │* │4   │5   │6   │=   │               │TRNS│TRNS│TRNS│TRNS│TRNS│
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │TRNS │TRNS│         │TRNS │TRNS│
+    //            └───────────┘         └───────────┘
+    [6] = LAYOUT_split_3x5_2(
+        KC_PSLS, KC_7, KC_8, KC_9, KC_PPLS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_0, KC_1, KC_2, KC_3, KC_PMNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_NO, KC_TRNS,
+        KC_PAST, KC_4, KC_5, KC_6, KC_PEQL, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
+    ),
+
+    //              Слой 7: Управление, Bootloader и Repurpose
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │TRNS│TRNS│:   │ESC │TRNS│               │TRNS│TRNS│TRNS│TRNS│DEL │
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│%   │/   │ENT │TRNS│               │DF(1│LGUI│TRNS│TRNS│TRNS│
+    //  │────┼────┼────┼────┼────┤               │────┼────┼────┼────┼────│
+    //  │TRNS│TRNS│TRNS│!   │TRNS│               │DF(0│TRNS│,   │.   │BOOT│
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │TRNS │TAB │         │NO   │TRNS│
+    //            └───────────┘         └───────────┘
+    [7] = LAYOUT_split_3x5_2(
+        KC_TRNS, KC_TRNS, KC_COLN, KC_ESC, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_DEL,
+        KC_TRNS, KC_PERC, KC_SLSH, KC_ENT, KC_TRNS, DF(1), KC_LGUI, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_EXLM, KC_TRNS, DF(0), KC_TRNS, RALT_T(KC_COMM), RCTL_T(KC_DOT), QK_BOOT,
+        KC_TRNS, KC_TAB, KC_NO, KC_TRNS
+    ),
+
+    //              Слой 8: Цифры и навигация
+    //  ┌─────────────────────────┐               ┌─────────────────────────┐
+    //  │1   │2   │3   │4   │5    │               │6   │7   │8   │9   │0    │
+    //  │────┼────┼────┼────┼─────┤               │────┼────┼────┼────┼─────│
+    //  │!   │@   │#   │$   │%    │               │^   │&   │*   │(   │)    │
+    //  │────┼────┼────┼────┼─────┤               │────┼────┼────┼────┼─────│
+    //  │~   │_   │+   │[   │]    │               │◄   │▼   │▲   │►   │ENT  │
+    //  └─────────────────────────┴───────────────┴─────────────────────────┘
+    //            ┌───────────┐         ┌───────────┐
+    //            │NO   │NO   │         │     │NO   │
+    //            └───────────┘         └───────────┘
+    [8] = LAYOUT_split_3x5_2(
+        KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0,
+        KC_EXLM, KC_AT, KC_HASH, KC_DLR, KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,
+        KC_TILD, LCTL(KC_UNDS), LCTL(KC_PLUS), KC_LBRC, KC_RBRC, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_ENT,
+        KC_NO, KC_NO, KC_PIPE, KC_NO
+    )
 };
 
 
-
 #ifdef OTHER_KEYMAP_C
-#    include OTHER_KEYMAP_C
+#   include OTHER_KEYMAP_C
 #endif // OTHER_KEYMAP_C
-

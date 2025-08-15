@@ -33,11 +33,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_TIME_TO_MAX 100
 
 // Pick good defaults for enabling homerow modifiers
-#define TAPPING_TERM 150
+#define TAPPING_TERM 100
 #define TAPPING_FORCE_HOLD
 #define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS // prevents unintentional taps during chords
-#define QUICK_TAP_TERM 120
 
 #define COMBO_TERM 30
 #define COMBO_MUST_TAP_PER_COMBO
