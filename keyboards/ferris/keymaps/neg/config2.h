@@ -34,16 +34,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Pick good defaults for enabling homerow modifiers
 #define TAPPING_TERM 200
-// #define TAPPING_FORCE_HOLD
 #define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM 0
-#define HOLD_ON_OTHER_KEY_PRESS // prevents unintentional taps during chords
-
-#define COMBO_TERM 30
-#define COMBO_MUST_TAP_PER_COMBO
-
-#define ONESHOT_TIMEOUT 3000             // 3s to use OSM/OSL
-#define ONESHOT_TAP_TOGGLE 2             // double-tap to latch
 
 // Underglow configuration
 #ifdef RGBLIGHT_ENABLE
