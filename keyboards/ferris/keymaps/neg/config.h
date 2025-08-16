@@ -17,8 +17,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define UNICODE_SELECTED_MODES UC_MAC, UC_LNX
-
 #define MOUSEKEY_INTERVAL 12
 #define MOUSEKEY_MAX_SPEED 6
 #define MOUSEKEY_TIME_TO_MAX 50
