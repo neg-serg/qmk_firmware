@@ -20,6 +20,7 @@ smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap
         SMTD_MT(KC_Z, KC_LSFT, 1)
         SMTD_LT(KC_Q, 2, 1)
         SMTD_MT(KC_TAB, KC_LEFT_GUI, 1)
+        SMTD_LT(KC_MINS, 1, 1)
     }
     return SMTD_RESOLUTION_UNHANDLED;
 }
@@ -46,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┤
             KC_Z , KC_X , KC_C , KC_V , KC_B ,            KC_N , KC_M , KC_COMM,KC_DOT,KC_SLSH,
         // └─────┴─────┴─────┴─────┴─────┘               └─────┴─────┴─────┴─────┴─────┘
-                                 KC_TAB, KC_SPC ,        KC_ENT, MO(1)
+                             KC_TAB, KC_SPC ,             KC_ENT, MO(1)
     ),
 
     // ───────────────────────────── Layer [1] — Numbers / Symbols / Arrows
@@ -70,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
             KC_LBRC, KC_LCBR, KC_BSLS, KC_RCBR, KC_RBRC,     KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, KC_RBRC,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
-                                   KC_LCTL, KC_LALT,        KC_LSFT, KC_TRNS
+                                       MO(4), KC_LALT,       KC_LSFT, KC_TRNS
     ),
 
     // ───────────────────────────── Layer [2] — Functions / System / Toggles
@@ -90,11 +91,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ┌────────┬────────┬────────┬────────┬─────┐      ┌────────┬────────┬────────┬────────┬─────┐
             KC_NO  , KC_ESC , KC_BSLS, KC_QUOT, KC_DEL ,     KC_F1  , KC_F2  , KC_F3  , KC_F4  , OSL(3),
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            MO(4)  , CW_TOGG, KC_MINS, KC_EQL , KC_BSPC,     KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_DEL ,
+            KC_NO ,  CW_TOGG, KC_MINS, KC_EQL, KC_BSPC,      KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_DEL ,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
             SC_SENT, KC_NO  , KC_HOME, KC_END , KC_INS ,     KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_INS ,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
-                                   KC_GRV , KC_TILD,        OS_LCA , OS_LCS
+                                       KC_GRV, KC_TILD,      OS_LCA , OS_LCS
     ),
 
     // ───────────────────────────── Layer [3] — F-keys + TO() jumps
@@ -118,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
             TO(0) ,  KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F11 ,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
-                                   TO(0) , TO(0) ,          TO(6) , KC_F12
+                                       TO(0) , TO(0) ,        TO(6) , KC_F12
     ),
 
     // ───────────────────────────── Layer [4] — OS / App controls + Media
@@ -142,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤       ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
            LCTL(KC_LEFT), LCTL(KC_X)   , LCTL(KC_RGHT), LCTL(KC_V)   , LSFT(KC_INS) ,          KC_N          , KC_MPLY      , KC_MPRV      , KC_MNXT      , KC_MSTP      ,
         // └──────────────┴──────────────┴──────────────┴──────────────┴──────────────┘       └──────────────┴──────────────┴──────────────┴──────────────┴──────────────┘
-                                            KC_HOME     , KC_END      ,       LCTL(KC_ENT) , LCTL(KC_TAB)
+                                                              KC_HOME     , KC_END      ,       LCTL(KC_ENT) , LCTL(KC_TAB)
     ),
 
     // ───────────────────────────── Layer [5] — Alt base
@@ -190,7 +191,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤       ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
        KC_8         , KC_Z         , KC_X         , KC_C         , KC_7         ,          KC_F11        , KC_F12       , TO(0)        , TO(0)        , KC_NO        ,
     // └──────────────┴──────────────┴──────────────┴──────────────┴──────────────┘       └──────────────┴──────────────┴──────────────┴──────────────┴──────────────┘
-                                        KC_TRNS      , KC_SPC      ,       KC_TRNS      , MO(1)
+                                                     KC_TRNS      , KC_SPC      ,       KC_TRNS      , MO(1)
     ),
 };
 
