@@ -16,7 +16,7 @@ smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap
     switch (keycode) {
         SMTD_MT(KC_A, KC_LEFT_CTRL, 2)
         SMTD_MT(KC_D, KC_LEFT_GUI, 2)
-        SMTD_MT(KC_F, KC_LEFT_ALT, 2)
+        SMTD_MT(KC_G, KC_LEFT_ALT, 2)
         SMTD_MT(KC_Z, KC_LSFT, 2)
         SMTD_LT(KC_Q, 2, 2)
         SMTD_MT(KC_TAB, KC_LEFT_GUI, 2)
