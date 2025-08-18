@@ -14,11 +14,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
     switch (keycode) {
-        SMTD_MT(KC_A, KC_LEFT_CTRL)
-        SMTD_MT(KC_D, KC_LEFT_GUI)
-        SMTD_MT(KC_F, KC_LEFT_ALT)
-        SMTD_MT(KC_Z, KC_LSFT)
-        SMTD_MT(KC_TAB, KC_LEFT_GUI)
+        SMTD_MT(KC_A, KC_LEFT_CTRL, 2)
+        SMTD_MT(KC_D, KC_LEFT_GUI, 2)
+        SMTD_MT(KC_F, KC_LEFT_ALT, 2)
+        SMTD_MT(KC_Z, KC_LSFT, 2)
+        SMTD_LT(KC_Q, 2, 2)
+        SMTD_MT(KC_TAB, KC_LEFT_GUI, 2)
     }
     return SMTD_RESOLUTION_UNHANDLED;
 }
