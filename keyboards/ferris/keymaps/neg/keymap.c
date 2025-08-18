@@ -14,12 +14,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
     switch (keycode) {
-        SMTD_MT(KC_A, KC_LEFT_CTRL, 2)
-        SMTD_MT(KC_D, KC_LEFT_GUI, 2)
-        SMTD_MT(KC_G, KC_LEFT_ALT, 2)
-        SMTD_MT(KC_Z, KC_LSFT, 2)
-        SMTD_LT(KC_Q, 2, 2)
-        SMTD_MT(KC_TAB, KC_LEFT_GUI, 2)
+        SMTD_MT(KC_A, KC_LEFT_CTRL, 1)
+        SMTD_MT(KC_D, KC_LEFT_GUI, 1)
+        SMTD_MT(KC_G, KC_LEFT_ALT, 1)
+        SMTD_MT(KC_Z, KC_LSFT, 1)
+        SMTD_LT(KC_Q, 2, 1)
+        SMTD_MT(KC_TAB, KC_LEFT_GUI, 1)
     }
     return SMTD_RESOLUTION_UNHANDLED;
 }
@@ -116,11 +116,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     [3] = LAYOUT_split_3x5_2(
         // ┌────────┬────────┬────────┬────────┬─────┐      ┌────────┬────────┬────────┬────────┬─────┐
-            KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 ,          KC_F6 , KC_F7 , KC_F8 , KC_F9 , KC_TRNS,
+            KC_F1 ,, KC_F2 , KC_F3 , KC_F4 , KC_F5 ,          KC_F6 , KC_F7 ,  KC_F8 ,  KC_F9 , KC_TRNS,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            TO(0) , KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO , KC_NO , KC_NO , KC_F10 ,
+            TO(0) ,  KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F10 ,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            TO(0) , KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO , KC_NO , KC_NO , KC_F11 ,
+            TO(0) ,  KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F11 ,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
                                    TO(0) , TO(0) ,          TO(6) , KC_F12
     ),
@@ -161,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     └─────┴─────┴─────┴─────┴─────┘      └─────┴─────┴─────┴─────┴─────┘
 
              ┌─────┬─────┐                ┌─────┬─────┐
-             │MO6  │ SPC │                │ [  │  ]  │
+             │MO6  │ SPC │                │ [   │  ]  │
              └─────┴─────┘                └─────┴─────┘
     */
     [5] = LAYOUT_split_3x5_2(
@@ -184,10 +184,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
     │  8  │  Z  │  X  │  C  │  7  │      │ F11 │ F12 │TO0  │TO0  │ NO  │
     └─────┴─────┴─────┴─────┴─────┘      └─────┴─────┴─────┴─────┴─────┘
-
-             ┌─────┬─────┐                ┌─────┬─────┐
-             │TRN  │ SPC │                │TRN  │ MO1 │
-             └─────┴─────┘                └─────┴─────┘
+                      ┌─────┬─────┐      ┌─────┬─────┐
+                      │TRN  │ SPC │      │TRN  │ MO1 │
+                      └─────┴─────┘      └─────┴─────┘
     */
    [6] = LAYOUT_split_3x5_2(
     // ┌──────────────┬──────────────┬──────────────┬──────────────┬──────────────┐       ┌──────────────┬──────────────┬──────────────┬──────────────┬──────────────┐
