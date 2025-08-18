@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┤
             KC_Z , KC_X , KC_C , KC_V , KC_B ,            KC_N , KC_M , KC_COMM,KC_DOT,KC_SLSH,
         // └─────┴─────┴─────┴─────┴─────┘               └─────┴─────┴─────┴─────┴─────┘
-                             KC_TAB, KC_SPC ,             KC_ENT, MO(1)
+                           KC_TAB, KC_SPC ,               KC_ENT, KC_MINS
     ),
 
     // ───────────────────────────── Layer [1] — Numbers / Symbols / Arrows
@@ -77,11 +77,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ───────────────────────────── Layer [2] — Functions / System / Toggles
     /*
     ┌─────┬─────┬─────┬─────┬─────┐      ┌─────┬─────┬─────┬─────┬─────┐
-    │ NO  │ ESC │  \  │  '  │ DEL │      │ F1  │ F2  │ F3  │ F4  │ OSL3│
+    │ NO  │ ESC │  \  │  '  │ DEL │      │ F1  │ F2  │ F3  │  -  │  [  │
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
-    │ MO4 │ CW  │  -  │  =  │BSPC │      │ F5  │ F6  │ F7  │ F8  │ DEL │
+    │ NO  │ CW  │  -  │  =  │BSPC │      │ F4  │ F5  │ F6  │  _  │  '  │
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
-    │ SCs │ NO  │HOME │ END │ INS │      │ F9  │ F10 │ F11 │ F12 │ INS │
+    │ SCs │ OSL4│HOME │ END │ INS │      │ F7  │ F8  │ F9  │  =  │  ]  │
     └─────┴─────┴─────┴─────┴─────┘      └─────┴─────┴─────┴─────┴─────┘
                       ┌─────┬─────┐      ┌─────┬─────┐
                       │  `  │  ~  │      │ C+A │ C+S │
@@ -89,11 +89,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     [2] = LAYOUT_split_3x5_2(
         // ┌────────┬────────┬────────┬────────┬─────┐      ┌────────┬────────┬────────┬────────┬─────┐
-            KC_NO  , KC_ESC , KC_BSLS, KC_QUOT, KC_DEL ,     KC_F1  , KC_F2  , KC_F3  , KC_F4  , OSL(3),
+            KC_NO  , KC_ESC , KC_BSLS, KC_QUOT, KC_DEL ,     KC_F1  , KC_F2  , KC_F3  , KC_MINS , KC_LBRC,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            KC_NO ,  CW_TOGG, KC_MINS, KC_EQL, KC_BSPC,      KC_F5  , KC_F6  , KC_F7  , KC_F8  , KC_DEL ,
+            KC_NO ,  CW_TOGG, KC_MINS, KC_EQL, KC_BSPC,      KC_F4  , KC_F5  , KC_F6  , KC_UNDS  , KC_QUOT ,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            SC_SENT, KC_NO  , KC_HOME, KC_END , KC_INS ,     KC_F9  , KC_F10 , KC_F11 , KC_F12 , KC_INS ,
+            SC_SENT,  OSL(3), KC_HOME, KC_END , KC_INS ,     KC_F7  , KC_F8 ,  KC_F9,   KC_EQL ,  KC_RBRC ,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
                                        KC_GRV, KC_TILD,      OS_LCA , OS_LCS
     ),
@@ -103,23 +103,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ┌─────┬─────┬─────┬─────┬─────┐      ┌─────┬─────┬─────┬─────┬─────┐
     │ F1  │ F2  │ F3  │ F4  │ F5  │      │ F6  │ F7  │ F8  │ F9  │ TRN │
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
-    │TO0  │ NO  │ NO  │ NO  │TO0  │      │ NO  │ NO  │ NO  │ NO  │ F10 │
+    │TO0  │ TO0 │ TO0 │ TO0 │TO0  │      │ NO  │ NO  │ NO  │ NO  │ F10 │
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
-    │TO0  │ NO  │ NO  │ NO  │TO0  │      │ NO  │ NO  │ NO  │ NO  │ F11 │
+    │TO0  │ TO0 │ TO0 │ TO0 │TO0  │      │ NO  │ NO  │ NO  │ NO  │ F11 │
     └─────┴─────┴─────┴─────┴─────┘      └─────┴─────┴─────┴─────┴─────┘
                       ┌─────┬─────┐      ┌─────┬─────┐
-                      │TO0  │TO0  │      │TO6  │ F12 │
+                      │TO0  │TO0  │      │TO5  │ TO5 │
                       └─────┴─────┘      └─────┴─────┘
     */
     [3] = LAYOUT_split_3x5_2(
         // ┌────────┬────────┬────────┬────────┬─────┐      ┌────────┬────────┬────────┬────────┬─────┐
-            KC_F1 ,, KC_F2 , KC_F3 , KC_F4 , KC_F5 ,          KC_F6 , KC_F7 ,  KC_F8 ,  KC_F9 , KC_TRNS,
+            KC_F1,   KC_F2 , KC_F3 , KC_F4 , KC_F5 ,          KC_F6 , KC_F7 ,  KC_F8 ,  KC_F9 , KC_F10,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            TO(0) ,  KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F10 ,
+            TO(0) ,  TO(0) ,  TO(0) ,  TO(0), TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F11 ,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            TO(0) ,  KC_NO , KC_NO , KC_NO , TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F11 ,
+            TO(0) ,  TO(0) ,  TO(0),   TO(0), TO(0) ,          KC_NO , KC_NO ,  KC_NO ,  KC_NO , KC_F12 ,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
-                                       TO(0) , TO(0) ,        TO(6) , KC_F12
+                                       TO(5) , TO(5) ,        TO(5) , TO(5)
     ),
 
     // ───────────────────────────── Layer [4] — OS / App controls + Media
