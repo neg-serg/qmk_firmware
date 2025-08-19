@@ -8,15 +8,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (!process_smtd(keycode, record)) {
         return false;
     }
-    // your code here
-    return true;
+    return true; // your code here
 }
 
 smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
     switch (keycode) {
         SMTD_MT(KC_A, KC_LEFT_CTRL, 1)
-        SMTD_MT(KC_D, KC_LEFT_GUI, 1)
-        SMTD_MT(KC_G, KC_LEFT_ALT, 1)
         SMTD_MT(KC_Z, KC_LSFT, 1)
         SMTD_LT(KC_Q, 2, 1)
         SMTD_MT(KC_TAB, KC_LEFT_GUI, 1)
@@ -36,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     │  Z  │  X  │  C  │  V  │  B  │      │  N  │  M  │  ,  │  .  │  /  │
     └─────┴─────┴─────┴─────┴─────┘      └─────┴─────┴─────┴─────┴─────┘
                       ┌─────┬─────┐      ┌─────┬─────┐
-                      │ TAB │ SPC │      │ ENT │ MO1 │
+                      │ TAB │ SPC │      │ ENT │  -  │
                       └─────┴─────┘      └─────┴─────┘
     */
     [0] = LAYOUT_split_3x5_2(
@@ -77,9 +74,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ───────────────────────────── Layer [2] — Functions / System / Toggles
     /*
     ┌─────┬─────┬─────┬─────┬─────┐      ┌─────┬─────┬─────┬─────┬─────┐
-    │ NO  │ ESC │  \  │  '  │ DEL │      │ F1  │ F2  │ F3  │  -  │  [  │
+    │ NO  │ ESC │  -  │  '  │ DEL │      │ F1  │ F2  │ F3  │  -  │  [  │
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
-    │ NO  │ CW  │  -  │  =  │BSPC │      │ F4  │ F5  │ F6  │  _  │  '  │
+    │ CW  │  \  │ ALT │ BSPC│  =  │      │ F4  │ F5  │ F6  │  _  │  '  │
     ├─────┼─────┼─────┼─────┼─────┤      ├─────┼─────┼─────┼─────┼─────┤
     │ SCs │ OSL4│HOME │ END │ INS │      │ F7  │ F8  │ F9  │  =  │  ]  │
     └─────┴─────┴─────┴─────┴─────┘      └─────┴─────┴─────┴─────┴─────┘
@@ -89,11 +86,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
     [2] = LAYOUT_split_3x5_2(
         // ┌────────┬────────┬────────┬────────┬─────┐      ┌────────┬────────┬────────┬────────┬─────┐
-            KC_NO  , KC_ESC , KC_BSLS, KC_QUOT, KC_DEL ,     KC_F1  , KC_F2  , KC_F3  , KC_MINS , KC_LBRC,
+            KC_NO  , KC_ESC , KC_MINS, KC_QUOT, KC_DEL ,     KC_F1  , KC_F2  , KC_F3  , KC_MINS, KC_LBRC,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            KC_NO ,  CW_TOGG, KC_MINS, KC_EQL, KC_BSPC,      KC_F4  , KC_F5  , KC_F6  , KC_UNDS  , KC_QUOT ,
+            CW_TOGG,  KC_BSLS, KC_LALT, KC_BSPC, KC_EQL,     KC_F4  , KC_F5  , KC_F6  , KC_UNDS, KC_QUOT ,
         // ├────────┼────────┼────────┼────────┼─────┤      ├────────┼────────┼────────┼────────┼─────┤
-            SC_SENT,  OSL(3), KC_HOME, KC_END , KC_INS ,     KC_F7  , KC_F8 ,  KC_F9,   KC_EQL ,  KC_RBRC ,
+            SC_SENT,  OSL(3), KC_HOME, KC_END , KC_INS ,     KC_F7  , KC_F8 ,  KC_F9,   KC_EQL,  KC_RBRC ,
         // └────────┴────────┴────────┴────────┴─────┘      └────────┴────────┴────────┴────────┴─────┘
                                        KC_GRV, KC_TILD,      OS_LCA , OS_LCS
     ),
