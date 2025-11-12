@@ -1,0 +1,5 @@
+# Kin42 RP2040 split keyboard
+MCU = RP2040
+BOOTLOADER = rp2040
+
+SERIAL_DRIVER = vendor
