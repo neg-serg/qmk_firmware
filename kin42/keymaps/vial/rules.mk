@@ -1,0 +1,11 @@
+VIA_ENABLE  = yes
+VIAL_ENABLE = yes
+LTO_ENABLE = yes
+QMK_SETTINGS = yes
+
+
+
+
+MCU = RP2040
+BOOTLOADER = rp2040
+SERIAL_DRIVER = vendor
